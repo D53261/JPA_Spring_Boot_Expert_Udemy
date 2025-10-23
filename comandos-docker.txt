@@ -1,0 +1,20 @@
+# Comandos em Docker para criar um banco de dados PostgreSQL
+# Este comando cria um container PostgreSQL com as seguintes configurações:
+# - Nome do container: librarydb
+# - Porta exposta: 5432
+# - Senha do usuário postgres: postgres
+# - Usuário: postgres
+# - Banco de dados: library
+# - Imagem utilizada: postgres:16.3
+docker run --name librarydb -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres -e POSTGRES_DB=library --network library-network postgres:16.3
+
+# Comando para criar um container pgAdmin4
+# - Nome do container: pgadmin4
+# - Porta exposta: 15432
+# - Email padrão: admin@admin.com
+# - Senha padrão: admin
+# - Imagem utilizada: dpage/pgadmin4
+docker run --name pgadmin4 -p 15432:80 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin dpage/pgadmin4:8.9
+
+# Comando para criar uma rede Docker chamada library-network
+docker network create library-network

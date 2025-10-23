@@ -1,0 +1,27 @@
+# Comandos SQL para criar tabelas e mostrar dados no banco de dados PostgreSQL
+# Cria tabela de autores
+create table autor(
+	id uuid not null primary key,
+	nome varchar(255) not null,
+	data_nascimento date not null,
+	nacionalidade varchar(50) not null
+);
+
+# Cria tabela de livros
+# A tabela de livros tem uma referência para a tabela de autores
+# e inclui uma restrição de verificação para o gênero do livro
+create table livro (
+	id uuid not null primary key,
+	isbn varchar(20) not null,
+	titulo varchar(255) not null,
+	data_publicacao date not null,
+	genero varchar(30) not null,
+	preco numeric(18,2),
+	id_autor uuid not null references autor(id),
+	constraint chk_genero check (genero in ('FICÇÃO', 'FANTASIA', 'MISTERIO', 'ROMANCE', 'BIOGRAFIA', 'CIÊNCIA'))
+);
+
+# Mostra os dados das tabelas
+select * from autor
+
+select * from livro
