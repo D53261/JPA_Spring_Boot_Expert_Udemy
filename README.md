@@ -1,16 +1,3 @@
-<think>
-Primeiro, o usuário quer modificar o README.md que criei anteriormente para que fique no estilo do exemplo fornecido. O exemplo é sobre "Arquitetura Spring no Projeto", focando em camadas como Controller, Service, Repository, Entity, etc., e inclui seções estruturadas com títulos numerados, exemplos e uma seção "Feito por".
-
-
-## Reviewing user request
-- The user wants to modify the previously created README.md to match the style of a given example.
-- The example focuses on "Arquitetura Spring no Projeto," detailing layers like Controller, Service, Repository, Entity, etc.
-- It includes structured sections with numbered titles, examples, and a "Feito por" section.
-
-## Adjusting README structure
-- The README will need numbered sections to align with the example's format.
-- Include descriptions of Spring architecture layers, ensuring clarity and organization.
-  </think># README dos Estudos sobre Spring Data JPA
 ## Parte do Curso: Spring Boot Expert: JPA, REST, JWT, OAuth2 com Docker e AWS
 Aqui estão apresentados os códigos usados durante a realização do curso da plataforma Udemy com nome mencionado acerca de uma sessão: Acesso a Dados com Spring JPA.
 
